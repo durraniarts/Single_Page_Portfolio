@@ -24,7 +24,7 @@ export default {
         opensans: ["Open Sans ", "sans-serif"],
       },
       content: {
-        brush: 'url("src/assets/brush.png")',
+        brush: 'url("assets/brush.png")',
       },
       screens: {
         xs: "480px",
