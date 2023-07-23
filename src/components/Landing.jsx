@@ -1,0 +1,129 @@
+import React, { useEffect, useRef } from "react";
+import useMediaQuery from "../hooks/useMediaQuery";
+import { motion, useInView } from "framer-motion";
+import AnchorLink from "react-anchor-link-smooth-scroll";
+import profilePhoto from "../assets/dp.png";
+import SocialMediaIcons from "./SocialMediaIcons";
+
+const Landing = ({ setSelectedPage }) => {
+  const isAboveMMediumScreens = useMediaQuery("(min-width: 1060px)");
+
+  const ref = useRef(null);
+  const isInView = useInView(ref);
+
+  useEffect(() => {
+    // console.log(isInView);
+    isInView && setSelectedPage("home");
+  }, [isInView]);
+
+  // console.log([window.MouseEvent]);
+  return (
+    <section
+      id="home"
+      className="md:flex md:justify-between md:items-center md:h-full gap-14 py-10 w-full mx-auto"
+    >
+      {/* image section */}
+
+      <div className=" md:order-2 flex justify-center basis-3/5 z-10 mt-16 md:mt-32 ">
+        {isAboveMMediumScreens ? (
+          <div
+            className=" relative z-0 ml-16 before:absolute before:-top-14 before:-left-12 before:rounded-t-[400px] 
+          before:w-full h-max  before:border-2 before:border-blue before:h-full before:z-[-1] "
+          >
+            <img
+              src={profilePhoto}
+              alt="profile"
+              className=" rounded-t-full hover:filter hover:saturate-150 transition duration-500 z-10 w-[400px]"
+            />
+          </div>
+        ) : (
+          <img
+            src={profilePhoto}
+            alt="profile"
+            className=" rounded-t-full px-8 hover:filter hover:saturate-150 transition duration-500 z-10 min-w-[300px] max-w-[400px]"
+          />
+        )}
+      </div>
+
+      {/* main section */}
+      <div className=" z-30 basis-2/5 mt-12 md:mt-32    ">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.6 }}
+          variants={{
+            hidden: { opacity: 0, x: -50 },
+            visible: { opacity: 1, x: 0 },
+          }}
+        >
+          <div className=" text-4xl xs:text-5xl font-playfair md:text-start text-center font-semibold  ">
+            Abd Ur
+            <div className=" mt-3 xs:mt-4">
+              Rehman {"    "}
+              <span
+                ref={ref}
+                className=" relative text-deep-blue font-semibold z-20 before:content-brush 
+              before:scale-[0.5] before:left-[-80px]  xs:before:scale-[0.7]   before:absolute 
+              before:top-[-90px] xs:before:top-[-82px] xs:before:left-[-60px] before:z-[-2]  "
+              >
+                Khan
+              </span>
+            </div>
+          </div>
+          <p className=" mt-6 xs:mt-8 text-sm text-center md:text-start mx-auto md:max-w-[400px] md:ml-0 xs:px-14 px-6 md:px-0  ">
+            I am a skilled Web Developer with expertise in the MERN stack. My
+            focus is on building Websites and Web Apps with exceptional
+            functionalities and amazing User Interfaces.
+          </p>
+        </motion.div>
+        <motion.div
+          className="flex mt-5 justify-center md:justify-start"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ delay: 0.2, duration: 0.6 }}
+          variants={{
+            hidden: { opacity: 0, x: -50 },
+            visible: { opacity: 1, x: 0 },
+          }}
+        >
+          <AnchorLink
+            className=" bg-gradient-rainblue text-deep-blue rounded-sm py-3 px-7 font-semibold hover:bg-blue hover:text-white transition duration-500"
+            onClick={() => setSelectedPage("contact")}
+            href="#contact"
+          >
+            Contact Me
+          </AnchorLink>
+          <AnchorLink
+            className=" rounded-r-sm bg-gradient-rainblue py-0.5 pr-0.5 "
+            onClick={() => setSelectedPage("contact")}
+            href="#contact"
+          >
+            <div
+              className=" bg-deep-blue hover:text-red transition duration-500 w-full h-full flex justify-center items-center
+             font-playfair px-10  "
+            >
+              Let's talk
+            </div>
+          </AnchorLink>
+        </motion.div>
+        <motion.div
+          className="flex mt-5 justify-center md:justify-start"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ delay: 0.4, duration: 0.6 }}
+          variants={{
+            hidden: { opacity: 0, x: -50 },
+            visible: { opacity: 1, x: 0 },
+          }}
+        >
+          <SocialMediaIcons />
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+export default Landing;
