@@ -14,18 +14,20 @@ const projectVariant = {
   hidden: { opacity: 0, scale: 0.8 },
   visible: { opacity: 1, scale: 1 },
 };
-
 const Project = ({ title }) => {
+  const isAboveMediumScreens = useMediaQuery("(min-width: 769px)");
   const overlayStyles = `absolute
-  h-full w-full bg-grey opacity-0 hover:opacity-90 transition duration-500 delay-100  z-30 
-    flex flex-col justify-center items-center text-center p-16 text-deep-blue`;
+  h-full w-full bg-grey opacity-0 hover:opacity-90 
+  transition duration-500 delay-100  z-30 
+    flex flex-col justify-center items-center text-center
+     p-16 text-deep-blue`;
 
   const projectTitle = title.split(" ").join("-").toLowerCase();
 
   const imageUrl = new URL(`../assets/${projectTitle}.png`, import.meta.url);
 
   return (
-    <motion.div variants={projectVariant} className=" relative  ">
+    <motion.div variants={projectVariant} className={"relative"}>
       <div className={overlayStyles}>
         <p className=" text-2xl font-playfair  ">{title}</p>
         <p className=" mt-7">
@@ -33,22 +35,19 @@ const Project = ({ title }) => {
           nonumy euismod tempor
         </p>
       </div>
-      <img src={imageUrl} className="h-auto" />
+      <img src={imageUrl} className="h-auto" alt={projectTitle} />
     </motion.div>
   );
 };
 
 const Projects = ({ setSelectedPage }) => {
-  const isAboveMediumScreens = useMediaQuery("(min-width: 769px)");
-
   const ref = useRef(null);
   const isInView = useInView(ref);
 
   useEffect(() => {
-    // console.log(isInView);
     isInView && setSelectedPage("projects");
   }, [isInView]);
-  console.log(isAboveMediumScreens);
+
   return (
     <section id="projects" className="py-48">
       {/* headings */}
@@ -83,8 +82,8 @@ const Projects = ({ setSelectedPage }) => {
           className="  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 "
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
           variants={container}
+          viewport={{ once: true, amount: 0 }}
         >
           <div
             ref={ref}
@@ -95,9 +94,11 @@ const Projects = ({ setSelectedPage }) => {
 
           <Project title={"Project 1"} />
           <Project title={"Project 2"} />
+
           <Project title={"Project 3"} />
           <Project title={"Project 4"} />
           <Project title={"Project 5"} />
+
           <Project title={"Project 6"} />
           <Project title={"Project 7"} />
           <Project title={"Project 8"} />
