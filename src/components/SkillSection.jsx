@@ -4,6 +4,44 @@ import useMediaQuery from "../hooks/useMediaQuery";
 import { motion, useInView } from "framer-motion";
 import skillsImage from "../assets/skills-image.png";
 
+const SubSections = ({ titleNo, title, subtitle }) => {
+  // console.log(Number(titleNo));
+  var color = undefined;
+
+  if (titleNo === "01") {
+    color = "bg-blue";
+  } else if (titleNo === "02") {
+    color = "bg-red";
+  } else if (titleNo === "03") {
+    color = "bg-yellow";
+  }
+
+  const styles = ` z-[-1] w-1/2 md:w-3/4 h-32 ${color} absolute right-0 top-0 `;
+
+  return (
+    <motion.div
+      className="md:basis-1/3 mt-10"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.5 }}
+      transition={{ duration: 0.6 }}
+      variants={{
+        hidden: { opacity: 0, y: 50 },
+        visible: { opacity: 1, y: 0 },
+      }}
+    >
+      <div className=" relative h-32">
+        <div className=" z-10">
+          <p className=" font-playfair font-semibold text-4xl ">{titleNo}</p>
+          <p className=" font-playfair font-semibold text-3xl mt-3">{title}</p>
+        </div>
+        <div className={styles} />
+      </div>
+      <p className=" mt-5">{subtitle}</p>
+    </motion.div>
+  );
+};
+
 const SkillSection = ({ setSelectedPage }) => {
   const isAboveMMediumScreens = useMediaQuery("(min-width: 1060px)");
   //   console.log({ pageYOffset });
@@ -37,9 +75,11 @@ const SkillSection = ({ setSelectedPage }) => {
           <LinearGradient width={"w-1/3"} />
 
           <p ref={ref} className=" mt-10 mb-7">
-            I am a skilled Web Developer with expertise in the MERN stack. My
+            {/* I am a skilled Web Developer with expertise in the MERN stack. My
             focus is on building Websites and Web Apps with exceptional
-            functionalities and amazing User Interfaces.
+            functionalities and amazing User Interfaces. */}
+            I have skills in developing Software, problem solving, User
+            Interfaces, Graphic design and much more.
           </p>
         </motion.div>
         <div className="  mt-16 md:mt-0">
@@ -68,88 +108,30 @@ const SkillSection = ({ setSelectedPage }) => {
 
       <div className="md:flex md:justify-between mt-16 gap-32">
         {/* experience */}
-        <motion.div
-          className="md:basis-1/3 mt-10"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.6 }}
-          variants={{
-            hidden: { opacity: 0, y: 50 },
-            visible: { opacity: 1, y: 0 },
-          }}
-        >
-          <div className=" relative h-32">
-            <div className=" z-10">
-              <p className=" font-playfair font-semibold text-4xl ">01</p>
-              <p className=" font-playfair font-semibold text-3xl mt-3">
-                Experience
-              </p>
-            </div>
-            <div className=" z-[-1] w-1/2 md:w-3/4 h-32 bg-blue absolute right-0 top-0 " />
-          </div>
-          <p className=" mt-5">
-            Developed Websites and Web Apps using MERN stack, HTML, CSS,
-            JavaScript. Built fullstack websites, restful APIs with NodeJs
-            ExpressJs.
-          </p>
-        </motion.div>
-
+        <SubSections
+          titleNo={"01"}
+          title={"Experience"}
+          subtitle={
+            // "My experience regarding software development is almost 2 years. For problem solving and building projects I use Programming languages like JavaScript and Python. "
+            "I use JavaScript to built web applications. I experienced building many beautiful UIs using latest frameworks and libraries, like React, MUI, Framer Motion, Tailwind and much more technologies. "
+          }
+        />
         {/* Innovative*/}
-        <motion.div
-          className="md:basis-1/3 mt-10"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ delay: 0.2, duration: 0.6 }}
-          variants={{
-            hidden: { opacity: 0, y: 50 },
-            visible: { opacity: 1, y: 0 },
-          }}
-        >
-          <div className=" relative h-32">
-            <div className=" z-10">
-              <p className=" font-playfair font-semibold text-4xl ">02</p>
-              <p className=" font-playfair font-semibold text-3xl mt-3">
-                Innovative
-              </p>
-            </div>
-            <div className=" z-[-1] w-1/2 md:w-3/4 h-32 bg-red absolute right-0 top-0 " />
-          </div>
-          <p className=" mt-5">
-            Developed Websites and Web Apps using MERN stack, HTML, CSS,
-            JavaScript. Built fullstack websites, restful APIs with NodeJs
-            ExpressJs.
-          </p>
-        </motion.div>
-
+        <SubSections
+          titleNo={"02"}
+          title={"Innovative"}
+          subtitle={
+            "Building projects at much harder level results in much proficient code writing, code debugging, higher accuracy, state management, basic programming fundamentals, and more consistency. "
+          }
+        />
         {/* Imaginative*/}
-        <motion.div
-          className="md:basis-1/3 mt-10"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ delay: 0.2, duration: 0.6 }}
-          variants={{
-            hidden: { opacity: 0, y: 50 },
-            visible: { opacity: 1, y: 0 },
-          }}
-        >
-          <div className=" relative h-32">
-            <div className=" z-10">
-              <p className=" font-playfair font-semibold text-4xl ">03</p>
-              <p className=" font-playfair font-semibold text-3xl mt-3">
-                Imaginative
-              </p>
-            </div>
-            <div className=" z-[-1] w-1/2 md:w-3/4 h-32 bg-yellow absolute right-0 top-0 " />
-          </div>
-          <p className=" mt-5">
-            Developed Websites and Web Apps using MERN stack, HTML, CSS,
-            JavaScript. Built fullstack websites, restful APIs with NodeJs
-            ExpressJs.
-          </p>
-        </motion.div>
+        <SubSections
+          titleNo={"03"}
+          title={"Imaginative"}
+          subtitle={
+            "Increasing skills and experience in Functional Programming helps in building Mobile Applications, In additional of level up of Python to built AI models using ML, DL, ANN to increase the UX resulting a better backend experience."
+          }
+        />
       </div>
     </section>
   );

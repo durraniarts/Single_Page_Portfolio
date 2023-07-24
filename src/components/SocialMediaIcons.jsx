@@ -1,7 +1,7 @@
 import React from "react";
 import linkedin from "../assets/linkedin.png";
 import twitter from "../assets/twitter.png";
-import facebook from "../assets/facebook.png";
+import github from "../assets/github.svg";
 import instagram from "../assets/instagram.png";
 const SocialMedia = ({ href, alt, src }) => {
   return (
@@ -30,9 +30,9 @@ const SocialMediaIcons = () => {
         src={twitter}
       />
       <SocialMedia
-        href={"https://www.facebook.com/durranishahzada.durrani/"}
+        href={"https://github.com/durraniarts"}
         alt={"facebook-link"}
-        src={facebook}
+        src={github}
       />
       <SocialMedia
         href={"https://www.instagram.com/abdulrehman_khan_durrani/"}

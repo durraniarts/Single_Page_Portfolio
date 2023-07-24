@@ -14,28 +14,27 @@ const projectVariant = {
   hidden: { opacity: 0, scale: 0.8 },
   visible: { opacity: 1, scale: 1 },
 };
-const Project = ({ title }) => {
-  const isAboveMediumScreens = useMediaQuery("(min-width: 769px)");
-  const overlayStyles = `absolute
+
+const Project = ({ title, subtitle }) => {
+  // const isAboveMediumScreens = useMediaQuery("(min-width: 769px)");
+
+  const overlayStyles = `absolute hover:scale-105
   h-full w-full bg-grey opacity-0 hover:opacity-90 
   transition duration-500 delay-100  z-30 
     flex flex-col justify-center items-center text-center
-     p-16 text-deep-blue`;
+     p-10 text-deep-blue`;
 
   const projectTitle = title.split(" ").join("-").toLowerCase();
 
   const imageUrl = new URL(`../assets/${projectTitle}.png`, import.meta.url);
 
   return (
-    <motion.div variants={projectVariant} className={"relative"}>
+    <motion.div variants={projectVariant} className={"relative "}>
       <div className={overlayStyles}>
-        <p className=" text-2xl font-playfair  ">{title}</p>
-        <p className=" mt-7">
-          loreum ipsum dolor sit amet, consectetur adipiscing elit sed diam
-          nonumy euismod tempor
-        </p>
+        <p className=" text-xl  font-playfair  ">{title}</p>
+        <p className=" mt-4 text-base">{subtitle}</p>
       </div>
-      <img src={imageUrl} className="h-auto" alt={projectTitle} />
+      <img src={imageUrl} className="h-auto " alt={projectTitle} />
     </motion.div>
   );
 };
@@ -70,9 +69,8 @@ const Projects = ({ setSelectedPage }) => {
         </div>
 
         <p className=" mt-10 mb-10">
-          Developed Websites and Web Apps using MERN stack, HTML, CSS,
-          JavaScript. Built fullstack websites, restful APIs with NodeJs
-          ExpressJs.
+          Some of my personal projects i have been working since I started my
+          journey with software development.
         </p>
       </motion.div>
 
@@ -92,16 +90,50 @@ const Projects = ({ setSelectedPage }) => {
             BEAUTIFUL USER INTERFACES
           </div>
 
-          <Project title={"Project 1"} />
-          <Project title={"Project 2"} />
+          <Project
+            title={"Project 1"}
+            subtitle={"GPT-3 website landing page. Using React.js, CSS."}
+          />
+          <Project
+            title={"Project 2"}
+            subtitle={"GERICHT restaurant webpage. Using React.js, CSS."}
+          />
 
-          <Project title={"Project 3"} />
-          <Project title={"Project 4"} />
-          <Project title={"Project 5"} />
+          <Project
+            title={"Project 3"}
+            subtitle={
+              "Fylo cloud base company main landing page. Using React.js, CSS."
+            }
+          />
+          <Project
+            title={"Project 4"}
+            subtitle={
+              "Dall-e an AI image generation Web Application. Using MERN, Tailwind CSS, OPEN-AI API."
+            }
+          />
+          <Project
+            title={"Project 5"}
+            subtitle={
+              "TourMonkey a tour guide application main page. Using React.js, MUI. "
+            }
+          />
 
-          <Project title={"Project 6"} />
-          <Project title={"Project 7"} />
-          <Project title={"Project 8"} />
+          <Project
+            title={"Project 6"}
+            subtitle={
+              "YouTube clone Web Application. Using React.js, MUI, Rapid-API."
+            }
+          />
+          <Project
+            title={"Project 7"}
+            subtitle={
+              "An E-commerce store Frontend. Using React.js, Tailwind CSS."
+            }
+          />
+          <Project
+            title={"Project 8"}
+            subtitle={"Blogr website main landing page. Using HTML, CSS."}
+          />
           {/* <div className="   flex justify-center text-center items-center min-h-[180px]  p-6 md:p-10 bg-blue max-w-[400px] max-h-[400px] text-xl md:text-2xl font-playfair font-semibold">
             SMOOTH USER EXPERIENCE
           </div> */}

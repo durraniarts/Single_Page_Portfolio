@@ -51,9 +51,4 @@ input {
     hsl(39deg 95% 79%) 89%,
     hsl(55deg 81% 81%) 100%
   );
-  /* filter: blur(4px); */
 }
-
-/* .brush::before {
-  content: url("./assets/brush.png");
-} */

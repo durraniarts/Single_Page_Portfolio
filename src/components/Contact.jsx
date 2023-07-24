@@ -19,7 +19,7 @@ const Contact = ({ setSelectedPage }) => {
     trigger,
     formState: { errors },
   } = useForm();
-  // console.log({ ...register() });
+
   const onSubmit = async (e) => {
     const isValid = await trigger();
 

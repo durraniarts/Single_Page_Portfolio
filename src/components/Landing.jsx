@@ -20,27 +20,31 @@ const Landing = ({ setSelectedPage }) => {
   return (
     <section
       id="home"
-      className="md:flex md:justify-between md:items-center md:h-full gap-14 py-10 w-full mx-auto"
+      className="md:flex md:justify-between md:items-center 
+      md:h-full gap-14 py-10 w-full mx-auto"
     >
       {/* image section */}
 
       <div className=" md:order-2 flex justify-center basis-3/5 z-10 mt-16 md:mt-32 ">
         {isAboveMMediumScreens ? (
           <div
-            className=" relative z-0 ml-16 before:absolute before:-top-14 before:-left-12 before:rounded-t-[400px] 
+            className=" relative z-0 ml-16 before:absolute before:-top-14 
+            before:-left-12 before:rounded-t-[400px] 
           before:w-full h-max  before:border-2 before:border-blue before:h-full before:z-[-1] "
           >
             <img
               src={profilePhoto}
               alt="profile"
-              className=" rounded-t-full hover:filter hover:saturate-150 transition duration-500 z-10 w-[400px]"
+              className=" rounded-t-full hover:filter hover:saturate-150 
+              transition duration-500 z-10 w-[400px]"
             />
           </div>
         ) : (
           <img
             src={profilePhoto}
             alt="profile"
-            className=" rounded-t-full px-8 hover:filter hover:saturate-150 transition duration-500 z-10 min-w-[300px] max-w-[400px]"
+            className=" rounded-t-full px-8 hover:filter hover:saturate-150
+             transition duration-500 z-10 min-w-[300px] max-w-[400px]"
           />
         )}
       </div>
@@ -71,10 +75,12 @@ const Landing = ({ setSelectedPage }) => {
               </span>
             </div>
           </div>
-          <p className=" mt-6 xs:mt-8 text-sm text-center md:text-start mx-auto md:max-w-[400px] md:ml-0 xs:px-14 px-6 md:px-0  ">
-            I am a skilled Web Developer with expertise in the MERN stack. My
-            focus is on building Websites and Web Apps with exceptional
-            functionalities and amazing User Interfaces.
+          <p
+            className=" mt-6 xs:mt-8 text-sm text-center md:text-start
+           mx-auto md:max-w-[400px] md:ml-0 xs:px-14 px-6 md:px-0  "
+          >
+            I am a Full Stack Web Developer with expertise in modern
+            technologies.
           </p>
         </motion.div>
         <motion.div
@@ -89,7 +95,8 @@ const Landing = ({ setSelectedPage }) => {
           }}
         >
           <AnchorLink
-            className=" bg-gradient-rainblue text-deep-blue rounded-sm py-3 px-7 font-semibold hover:bg-blue hover:text-white transition duration-500"
+            className=" bg-gradient-rainblue text-deep-blue rounded-sm py-3 px-7
+             font-semibold hover:bg-blue hover:text-white transition duration-500"
             onClick={() => setSelectedPage("contact")}
             href="#contact"
           >
@@ -101,7 +108,8 @@ const Landing = ({ setSelectedPage }) => {
             href="#contact"
           >
             <div
-              className=" bg-deep-blue hover:text-red transition duration-500 w-full h-full flex justify-center items-center
+              className=" bg-deep-blue hover:text-red transition duration-500 w-full 
+              h-full flex justify-center items-center
              font-playfair px-10  "
             >
               Let's talk
