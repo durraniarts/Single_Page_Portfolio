@@ -27,7 +27,7 @@ const Project = ({ title, subtitle }) => {
   const projectTitle = title.split(" ").join("-").toLowerCase();
 
   const imageUrl = new URL(`../assets/${projectTitle}.png`, import.meta.url);
-
+  console.log(imageUrl);
   return (
     <motion.div variants={projectVariant} className={"relative "}>
       <div className={overlayStyles}>
@@ -133,6 +133,13 @@ const Projects = ({ setSelectedPage }) => {
           <Project
             title={"Project 8"}
             subtitle={"Blogr website main landing page. Using HTML, CSS."}
+          />
+
+          <Project
+            title={"Project 9"}
+            subtitle={
+              "AI generated prompt without OpenAI API integration. Using Next.js, Tailwind CSS, MongoDB, NextAuth."
+            }
           />
           {/* <div className="   flex justify-center text-center items-center min-h-[180px]  p-6 md:p-10 bg-blue max-w-[400px] max-h-[400px] text-xl md:text-2xl font-playfair font-semibold">
             SMOOTH USER EXPERIENCE
