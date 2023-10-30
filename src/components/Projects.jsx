@@ -27,14 +27,18 @@ const Project = ({ title, subtitle }) => {
   const projectTitle = title.split(" ").join("-").toLowerCase();
 
   const imageUrl = new URL(`../assets/${projectTitle}.png`, import.meta.url);
-  console.log(imageUrl);
+  // console.log(imageUrl);
   return (
     <motion.div variants={projectVariant} className={"relative "}>
       <div className={overlayStyles}>
         <p className=" text-xl  font-playfair  ">{title}</p>
         <p className=" mt-4 text-base">{subtitle}</p>
       </div>
-      <img src={imageUrl} className="h-auto " alt={projectTitle} />
+      <img
+        src={imageUrl}
+        className=" min-h-[150px] xs:min-h-[200px] w-auto"
+        alt={projectTitle}
+      />
     </motion.div>
   );
 };
