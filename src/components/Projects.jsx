@@ -12,39 +12,6 @@ const container = {
   },
 };
 
-const projectVariant = {
-  hidden: { opacity: 0, scale: 0.8 },
-  visible: { opacity: 1, scale: 1 },
-};
-
-const Project = ({ title, subtitle }) => {
-  // const isAboveMediumScreens = useMediaQuery("(min-width: 769px)");
-
-  const overlayStyles = `absolute hover:scale-105
-  h-full w-full bg-grey opacity-0 hover:opacity-90 
-  transition duration-500 delay-100  z-30 
-    flex flex-col justify-center items-center text-center
-     p-10 text-deep-blue`;
-
-  const projectTitle = title.split(" ").join("-").toLowerCase();
-
-  const imageUrl = new URL(`../assets/${projectTitle}.png`, import.meta.url);
-  // console.log(imageUrl);
-  return (
-    <motion.div variants={projectVariant} className={"relative "}>
-      <div className={overlayStyles}>
-        <p className=" text-xl  font-playfair  ">{title}</p>
-        <p className=" mt-4 text-base">{subtitle}</p>
-      </div>
-      <img
-        src={imageUrl}
-        className=" min-h-[150px] xs:min-h-[200px] w-auto"
-        alt={projectTitle}
-      />
-    </motion.div>
-  );
-};
-
 const Projects = ({ setSelectedPage }) => {
   const ref = useRef(null);
   const isInView = useInView(ref);
@@ -54,7 +21,7 @@ const Projects = ({ setSelectedPage }) => {
   }, [isInView]);
 
   return (
-    <section id="projects" className="py-48">
+    <section id="projects" className="py-48 flex  flex-col items-center">
       {/* headings */}
       <motion.div
         className="md:w-2/5 mx-auto text-center"
@@ -89,64 +56,19 @@ const Projects = ({ setSelectedPage }) => {
           variants={container}
           viewport={{ once: true, amount: 0 }}
         >
-          <div ref={ref} className=" flex flex-wrap gap-10">
+          <div ref={ref} className=" flex flex-wrap gap-10 justify-center">
             {DATA.projects.map((project, index) => (
               <ImageCard project={project} key={index} />
             ))}
           </div>
-          {/* <Project
-            title={"Project 1"}
-            subtitle={"GPT-3 website landing page. Using React.js, CSS."}
-          />
-          <Project
-            title={"Project 2"}
-            subtitle={"GERICHT restaurant webpage. Using React.js, CSS."}
-          />
-
-          <Project
-            title={"Project 3"}
-            subtitle={
-              "Fylo cloud base company main landing page. Using React.js, CSS."
-            }
-          />
-          <Project
-            title={"Project 4"}
-            subtitle={
-              "Dall-e an AI image generation Web Application. Using MERN, Tailwind CSS, OPEN-AI API."
-            }
-          />
-          <Project
-            title={"Project 5"}
-            subtitle={
-              "TourMonkey a tour guide application main page. Using React.js, MUI. "
-            }
-          />
-
-          <Project
-            title={"Project 6"}
-            subtitle={
-              "YouTube clone Web Application. Using React.js, MUI, Rapid-API."
-            }
-          />
-          <Project
-            title={"Project 7"}
-            subtitle={
-              "An E-commerce store Frontend. Using React.js, Tailwind CSS."
-            }
-          />
-          <Project
-            title={"Project 8"}
-            subtitle={"Blogr website main landing page. Using HTML, CSS."}
-          />
-
-          <Project
-            title={"Project 9"}
-            subtitle={
-              "AI generated prompt without OpenAI API integration. Using Next.js, Tailwind CSS, MongoDB, NextAuth."
-            }
-          /> */}
         </motion.div>
       </div>
+      <a
+        href="https://github.com/durraniarts/"
+        className="mt-10 font-playfair font-black underline underline-offset-4 text-yellow  border border-gray-700 p-2 rounded-md"
+      >
+        FOR MORE PROJECTS VISIT MY GITHUB ACCOUNT
+      </a>
     </section>
   );
 };

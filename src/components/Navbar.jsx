@@ -113,7 +113,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
         } ${!isMenuToggled && "translate-x-[300px] duration-300"} popup `} */}
         {isMenuToggled && !isAboveSmallScreens && (
           <motion.div
-            className="fixed bottom-0 right-0 h-full w-[300px] popup "
+            className="fixed bottom-0 right-0 h-full w-[300px] bg-[#001d3d] "
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
@@ -134,7 +134,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
             </div>
 
             {/* menu items */}
-            <div className="flex flex-col gap-10 ml-[33%] text-2xl text-deep-blue">
+            <div className="flex flex-col gap-10 ml-[33%] text-2xl text-white">
               <LinkNames
                 setSelectedPage={setSelectedPage}
                 selectedPage={selectedPage}

@@ -6,25 +6,6 @@ import skillsImage from "../assets/skills-image.png";
 import Card from "./shared/Card";
 import DATA from "../constants";
 
-// const SubSections = ({ titleNo, title, subtitle }) => {
-//   // console.log(Number(titleNo));
-//   var color = undefined;
-
-//   if (titleNo === "01") {
-//     color = "bg-blue";
-//   } else if (titleNo === "02") {
-//     color = "bg-red";
-//   } else if (titleNo === "03") {
-//     color = "bg-yellow";
-//   }
-
-//   const styles = ` z-[-1] w-1/2 md:w-3/4 h-32 ${color} absolute right-0 top-0 `;
-
-//   return (
-
-//   );
-// };
-
 const SkillSection = ({ setSelectedPage }) => {
   const isAboveMMediumScreens = useMediaQuery("(min-width: 1060px)");
 
@@ -79,7 +60,7 @@ const SkillSection = ({ setSelectedPage }) => {
             <Card skills={data.technologies} key={index} title={data.title} />
           ))}
         </motion.div>
-        <div className="border border-blue  p-7 gap-7 flex flex-wrap rounded-md items-center">
+        <div className="border border-blue  p-7 gap-7 flex flex-wrap rounded-md items-center sm:w-fit w-[300px]">
           <h4 className="font-opensans text-yellow font-black sm:text-lg text-md">
             LANGUAGES
           </h4>
