@@ -38,7 +38,7 @@ body,
   );
 }
 
-input {
+/* input {
   background-image: linear-gradient(
     45deg,
     hsl(240deg 24% 53%) 0%,
@@ -52,4 +52,8 @@ input {
     hsl(39deg 95% 79%) 89%,
     hsl(55deg 81% 81%) 100%
   );
+} */
+
+.blurNavbar {
+  backdrop-filter: 10px grayscale(0.5) opacity(0.8) !important ;
 }

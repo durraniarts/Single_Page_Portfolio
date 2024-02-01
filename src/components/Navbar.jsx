@@ -10,7 +10,7 @@ const Link = ({ page, selectedPage, setSelectedPage, closePopup }) => {
   // console.log(selectedPage);
   const [styling, setStyling] = useState();
   const application = () => {
-    return setStyling("text-yellow");
+    return setStyling("text-red");
   };
 
   useEffect(() => {
@@ -77,17 +77,16 @@ const LinkNames = ({ selectedPage, setSelectedPage, closePopup }) => {
 const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
   const [isMenuToggled, setIsMenuToggled] = useState(false);
   const isAboveSmallScreens = useMediaQuery("(min-width: 768px)");
-  const navbarBackground = isTopOfPage ? "" : "bg-red";
+  const navbarBackground = isTopOfPage ? "" : "bg-[#001d3d]";
 
   useEffect(() => {
     setIsMenuToggled(false);
   }, [isAboveSmallScreens]);
 
   return (
-    <nav
-      className={` ${navbarBackground} z-40 w-full max-w-[1440px] fixed top-0 py-6`}
-    >
-      <div className="flex items-center justify-between mx-auto w-5/6">
+    <nav className={` ${""} z-40 w-full max-w-[1440px] fixed top-0 `}>
+      <div className={`${navbarBackground} w-full h-full absolute -z-10 `} />
+      <div className="flex items-center justify-between mx-auto w-5/6 py-6 z-50">
         <h4 className=" font-playfair text-3xl font-bold ">DA</h4>
         {/* desktop navbar */}
         {isAboveSmallScreens ? (

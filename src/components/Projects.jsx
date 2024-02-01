@@ -2,6 +2,8 @@ import React, { useEffect, useRef, useState } from "react";
 import LinearGradient from "./LinearGradient";
 import { motion, useInView } from "framer-motion";
 import useMediaQuery from "../hooks/useMediaQuery";
+import ImageCard from "./shared/ImageCard";
+import DATA from "../constants";
 
 const container = {
   hidden: {},
@@ -59,7 +61,7 @@ const Projects = ({ setSelectedPage }) => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}
-        transition={{ duration: 0.6 }}
+        transition={{ duration: 0.4 }}
         variants={{
           hidden: { opacity: 0, y: -50 },
           visible: { opacity: 1, y: 0 },
@@ -79,22 +81,20 @@ const Projects = ({ setSelectedPage }) => {
       </motion.div>
 
       {/* projects */}
-      <div className=" flex justify-center  ">
+      <div className=" flex justify-center py-10  ">
         <motion.div
-          className="  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 "
+          className=""
           initial="hidden"
           whileInView="visible"
           variants={container}
           viewport={{ once: true, amount: 0 }}
         >
-          <div
-            ref={ref}
-            className="   flex justify-center text-center items-center p-6 md:p-10 bg-red  max-h-[400px] text-xl md:text-2xl font-playfair font-semibold"
-          >
-            BEAUTIFUL USER INTERFACES
+          <div ref={ref} className=" flex flex-wrap gap-10">
+            {DATA.projects.map((project, index) => (
+              <ImageCard project={project} key={index} />
+            ))}
           </div>
-
-          <Project
+          {/* <Project
             title={"Project 1"}
             subtitle={"GPT-3 website landing page. Using React.js, CSS."}
           />
@@ -144,10 +144,7 @@ const Projects = ({ setSelectedPage }) => {
             subtitle={
               "AI generated prompt without OpenAI API integration. Using Next.js, Tailwind CSS, MongoDB, NextAuth."
             }
-          />
-          {/* <div className="   flex justify-center text-center items-center min-h-[180px]  p-6 md:p-10 bg-blue max-w-[400px] max-h-[400px] text-xl md:text-2xl font-playfair font-semibold">
-            SMOOTH USER EXPERIENCE
-          </div> */}
+          /> */}
         </motion.div>
       </div>
     </section>

@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from "react";
 import useMediaQuery from "../hooks/useMediaQuery";
 import { motion, useInView } from "framer-motion";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import profilePhoto from "../assets/dp.png";
 import SocialMediaIcons from "./SocialMediaIcons";
 
 const Landing = ({ setSelectedPage }) => {
@@ -33,7 +32,7 @@ const Landing = ({ setSelectedPage }) => {
           before:w-full h-max  before:border-2 before:border-blue before:h-full before:z-[-1] "
           >
             <img
-              src={profilePhoto}
+              src="/assets/dp.png"
               alt="profile"
               className=" rounded-t-full hover:filter hover:saturate-150 
               transition duration-500 z-10 w-[400px]"
@@ -41,7 +40,7 @@ const Landing = ({ setSelectedPage }) => {
           </div>
         ) : (
           <img
-            src={profilePhoto}
+            src="/assets/dp.png"
             alt="profile"
             className=" rounded-t-full px-8 hover:filter hover:saturate-150
              transition duration-500 z-10 min-w-[300px] max-w-[400px]"

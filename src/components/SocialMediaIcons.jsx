@@ -18,7 +18,7 @@ const SocialMedia = ({ href, alt, src }) => {
 
 const SocialMediaIcons = () => {
   return (
-    <div className=" flex justify-center md:justify-start my-6 xs:my-10 gap-7">
+    <div className=" flex justify-center md:justify-start my-6  gap-7">
       <SocialMedia
         href={"https://www.linkedin.com/in/abdul-rehman-khan-555a50247"}
         alt={"linkedin-link"}

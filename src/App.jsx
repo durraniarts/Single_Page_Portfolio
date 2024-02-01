@@ -69,7 +69,7 @@ function App() {
       <div className=" w-5/6 md:h-full mx-auto ">
         <Contact setSelectedPage={setSelectedPage} />
       </div>
-      <div className="  mx-auto ">
+      <div className=" mx-auto ">
         <Footer />
       </div>
     </div>
