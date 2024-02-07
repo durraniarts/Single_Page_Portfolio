@@ -11,6 +11,10 @@ const container = {
     transition: { staggerChildren: 0.2 },
   },
 };
+const projectVariant = {
+  hidden: { opacity: 0, scale: 0.8 },
+  visible: { opacity: 1, scale: 1 },
+};
 
 const Projects = ({ setSelectedPage }) => {
   const ref = useRef(null);
@@ -54,11 +58,13 @@ const Projects = ({ setSelectedPage }) => {
           initial="hidden"
           whileInView="visible"
           variants={container}
-          viewport={{ once: true, amount: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
         >
           <div ref={ref} className=" flex flex-wrap gap-10 justify-center">
             {DATA.projects.map((project, index) => (
-              <ImageCard project={project} key={index} />
+              <motion.div variants={projectVariant} key={index}>
+                <ImageCard project={project} />
+              </motion.div>
             ))}
           </div>
         </motion.div>

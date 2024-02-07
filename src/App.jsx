@@ -10,6 +10,7 @@ import Projects from "./components/Projects";
 import Testimonials from "./components/Testimonials";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import FloatingIcons from "./components/shared/FloatingIcons";
 
 //ctrl + alt + t for tailwind docs
 
@@ -47,13 +48,18 @@ function App() {
         )}
         <Landing setSelectedPage={setSelectedPage} />
       </div>
+
       <LinearGradient width={"w-full"} />
+
       {/* SKILLS SECTION */}
       <div className=" w-5/6 mx-auto md:min-h-full">
         <SkillSection setSelectedPage={setSelectedPage} />
       </div>
       <LinearGradient width={"w-full"} />
+
       {/* PROJECTS SECTION */}
+      <FloatingIcons />
+      <LinearGradient width={"w-full"} />
       <div className=" w-5/6 mx-auto ">
         <Projects setSelectedPage={setSelectedPage} />
       </div>

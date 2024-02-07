@@ -18,7 +18,7 @@ const SkillSection = ({ setSelectedPage }) => {
   }, [isInView]);
   // console.log(DATA);
   return (
-    <section id="skills" className=" pt-10 pb-24  ">
+    <section id="skills" className="  pt-20 pb-48  ">
       {/* header and image section */}
       <div className="md:flex md:justify-between md:gap-16 mt-32">
         <motion.div
@@ -60,22 +60,34 @@ const SkillSection = ({ setSelectedPage }) => {
             <Card skills={data.technologies} key={index} title={data.title} />
           ))}
         </motion.div>
-        <div className="border border-blue  p-7 gap-7 flex flex-wrap rounded-md items-center sm:w-fit w-[300px]">
-          <h4 className="font-opensans text-yellow font-black sm:text-lg text-md">
-            LANGUAGES
-          </h4>
-          <div className="flex gap-4 flex-wrap">
-            {DATA.languages.map((language, index) => (
-              <div
-                key={index}
-                className="p-4 
+        <motion.div
+          className=" "
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.5 }}
+          variants={{
+            hidden: { opacity: 0, y: 50 },
+            visible: { opacity: 1, y: 0 },
+          }}
+        >
+          <div className="border border-blue  p-7 gap-7 flex flex-wrap rounded-md items-center sm:w-fit w-[300px]">
+            <h4 className="font-opensans text-yellow font-black sm:text-lg text-md">
+              LANGUAGES
+            </h4>
+            <div className="flex gap-4 flex-wrap">
+              {DATA.languages.map((language, index) => (
+                <div
+                  key={index}
+                  className="p-4 
                 border  border-red  rounded-md"
-              >
-                {language}
-              </div>
-            ))}
+                >
+                  {language}
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
