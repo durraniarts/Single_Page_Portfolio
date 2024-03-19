@@ -58,8 +58,7 @@ function App() {
       <LinearGradient width={"w-full"} />
 
       {/* PROJECTS SECTION */}
-      <FloatingIcons />
-      <LinearGradient width={"w-full"} />
+
       <div className=" w-5/6 mx-auto ">
         <Projects setSelectedPage={setSelectedPage} />
       </div>

@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import LinearGradient from "./LinearGradient";
 import { motion, useInView } from "framer-motion";
-import useMediaQuery from "../hooks/useMediaQuery";
 import ImageCard from "./shared/ImageCard";
 import DATA from "../constants";
 
@@ -38,7 +37,7 @@ const Projects = ({ setSelectedPage }) => {
           visible: { opacity: 1, y: 0 },
         }}
       >
-        <div className=" flex flex-col justify-center items-center">
+        <div className=" selected flex flex-col justify-center items-center">
           <p className=" font-playfair font-semibold text-3xl  xs:text-4xl mb-5  ">
             <span className="text-red">PRO</span>JECTS
           </p>
