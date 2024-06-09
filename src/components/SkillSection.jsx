@@ -43,10 +43,10 @@ const SkillSection = ({ setSelectedPage }) => {
 
       <div
         ref={ref}
-        className="flex justify-center flex-col mt-16 gap-16 w-full "
+        className="flex justify-center flex-col mt-16 gap-8 w-full "
       >
         <motion.div
-          className="flex flex-row gap-5 flex-wrap  justify-start "
+          className="flex flex-row gap-4 flex-wrap  justify-start "
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
@@ -71,7 +71,7 @@ const SkillSection = ({ setSelectedPage }) => {
             visible: { opacity: 1, y: 0 },
           }}
         >
-          <div className="border border-blue  p-7 gap-7 flex flex-wrap rounded-md items-center sm:w-fit w-[300px]">
+          <div className="border border-zinc-700  p-7 gap-7 flex flex-col flex-wrap rounded-md    min-w-[300px] bg-opaque-black">
             <h4 className="font-opensans text-yellow font-black sm:text-lg text-md">
               LANGUAGES
             </h4>

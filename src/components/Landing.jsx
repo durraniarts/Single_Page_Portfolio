@@ -83,7 +83,7 @@ const Landing = ({ setSelectedPage }) => {
           </p>
         </motion.div>
         <motion.div
-          className="flex mt-5 justify-center md:justify-start"
+          className="flex mt-5 justify-center md:justify-start gap-2"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
@@ -94,22 +94,22 @@ const Landing = ({ setSelectedPage }) => {
           }}
         >
           <AnchorLink
-            className=" bg-gradient-rainblue text-deep-blue rounded-sm py-3 px-7
-             font-semibold hover:bg-blue hover:text-white transition duration-500"
+            className=" bg-gradient-rainblue text-white rounded-sm p-3 text-center
+             font-semibold  transition duration-500 font-playfair md:w-1/2 w-1/4 min-w-fit "
             onClick={() => setSelectedPage("contact")}
             href="#contact"
           >
             Contact Me
           </AnchorLink>
           <AnchorLink
-            className=" rounded-r-sm bg-gradient-rainblue py-0.5 pr-0.5 "
+            className=" rounded-sm bg-gradient-rainblue p-3 md:w-1/2 w-1/4 min-w-fit  text-center  "
             onClick={() => setSelectedPage("contact")}
             href="#contact"
           >
             <div
-              className=" bg-deep-blue hover:text-red transition duration-500 w-full 
+              className=" bg-transparent transition duration-500 w-full 
               h-full flex justify-center items-center
-             font-playfair px-10  "
+             font-playfair   "
             >
               Let's talk
             </div>

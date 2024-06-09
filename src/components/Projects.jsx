@@ -59,7 +59,7 @@ const Projects = ({ setSelectedPage }) => {
           variants={container}
           viewport={{ once: true, amount: 0.5 }}
         >
-          <div ref={ref} className=" flex flex-wrap gap-10 justify-center">
+          <div ref={ref} className=" flex flex-wrap gap-8 justify-center">
             {DATA.projects.map((project, index) => (
               <motion.div variants={projectVariant} key={index}>
                 <ImageCard project={project} />
@@ -70,7 +70,7 @@ const Projects = ({ setSelectedPage }) => {
       </div>
       <a
         href="https://github.com/durraniarts/"
-        className="mt-10 font-playfair font-black underline underline-offset-4 text-yellow  border border-gray-700 p-2 rounded-md"
+        className="mt-10 font-opensans font-black underline underline-offset-4 text-yellow  border border-gray-700 p-2 rounded-md text-sm"
       >
         FOR MORE PROJECTS VISIT MY GITHUB ACCOUNT
       </a>

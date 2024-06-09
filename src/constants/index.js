@@ -16,6 +16,9 @@ const DATA = {
         "ReactJS",
         "NextJS 13",
         "ShadCn",
+        "Material UI",
+        "Framer Motion",
+        "GSAP",
       ],
     },
     { title: "backend", technologies: ["NodeJS", "ExpressJS"] },
@@ -31,13 +34,13 @@ const DATA = {
       ],
     },
     { title: "mobile Development", technologies: ["React Native", "Expo"] },
+    { title: "Desktop App", technologies: ["Electron", "Tkinter"] },
   ],
-  languages: ["JavaScript", "TypeScript", "Python", "C", "SQL"],
+  languages: ["JavaScript", "TypeScript", "Python", "C", "SQL", "PostgreSQL"],
   projects: [
     {
       title: "DALLE Clone",
-      technologies:
-        " React, Node, Express, MongoDB, Tailwind CSS, OPEN-AI API.",
+      technologies: " React, Node, Express, MongoDB, Tailwind CSS, OPEN-AI API",
       imglink: "/assets/project-4.png",
       link: "https://github.com/durraniarts/dall_e_clone",
     },
@@ -49,7 +52,7 @@ const DATA = {
     },
     {
       title: "CHAT GPT Clone",
-      technologies: " Next, Node, Express, MongoDB, Tailwind CSS, OPEN-AI API.",
+      technologies: " Next, Node, Express, MongoDB, Tailwind CSS, OPEN-AI API",
       imglink: "/assets/project-9.png",
       link: "https://github.com/durraniarts/promptopia_Next_app",
     },

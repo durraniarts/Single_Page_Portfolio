@@ -10,7 +10,7 @@ const Sticky = ({ skill }) => {
 
 const Card = ({ skills, title }) => {
   return (
-    <div className="border flex flex-col w-[300px] gap-5 p-5 border-blue rounded-md ">
+    <div className="border flex flex-col flex-grow min-w-[300px] gap-5 p-5 border-zinc-700 rounded-md bg-opaque-black">
       <h3 className=" font-opensans text-yellow font-black sm:text-lg text-md">
         {title.toUpperCase()}
       </h3>

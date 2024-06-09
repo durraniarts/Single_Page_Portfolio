@@ -77,16 +77,18 @@ const LinkNames = ({ selectedPage, setSelectedPage, closePopup }) => {
 const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
   const [isMenuToggled, setIsMenuToggled] = useState(false);
   const isAboveSmallScreens = useMediaQuery("(min-width: 768px)");
-  const navbarBackground = isTopOfPage ? "" : "bg-[#001d3d]";
+  const navbarBackground = isTopOfPage ? "" : "bg-[#fff1] ";
 
   useEffect(() => {
     setIsMenuToggled(false);
   }, [isAboveSmallScreens]);
 
   return (
-    <nav className={` ${""} z-40 w-full max-w-[1440px] fixed top-0 `}>
-      <div className={`${navbarBackground} w-full h-full absolute -z-10 `} />
-      <div className="flex items-center justify-between mx-auto w-5/6 py-6 z-50">
+    <nav className={` ${""} z-40 w-full max-w-[1440px] fixed top-4 `}>
+      <div
+        className={`${navbarBackground} w-full h-full absolute -z-10 backdrop-blur-md transition-all duration-200 border border-zinc-700  rounded-full `}
+      />
+      <div className="flex items-center justify-between mx-auto w-5/6 py-4 z-50 ">
         <h4 className=" font-playfair text-3xl font-bold ">DA</h4>
         {/* desktop navbar */}
         {isAboveSmallScreens ? (
@@ -113,7 +115,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
         } ${!isMenuToggled && "translate-x-[300px] duration-300"} popup `} */}
         {isMenuToggled && !isAboveSmallScreens && (
           <motion.div
-            className="fixed bottom-0 right-0 h-full w-[300px] bg-[#001d3d] "
+            className="fixed bottom-0 right-0 h-full w-full bg-[#ffg1] backdrop-blur-xl "
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
