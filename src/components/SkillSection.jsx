@@ -50,7 +50,7 @@ const SkillSection = ({ setSelectedPage }) => {
             className="flex flex-row gap-4 flex-wrap  justify-start "
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 0.5 }}
             variants={{
               hidden: { opacity: 0, y: 50 },

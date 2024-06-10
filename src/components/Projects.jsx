@@ -32,7 +32,7 @@ const Projects = ({ setSelectedPage }) => {
         className="md:w-2/5 mx-auto text-center"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.5 }}
+        viewport={{ once: true, amount: 0.1 }}
         transition={{ duration: 0.4 }}
         variants={{
           hidden: { opacity: 0, y: -50 },
@@ -59,7 +59,7 @@ const Projects = ({ setSelectedPage }) => {
           initial="hidden"
           whileInView="visible"
           variants={container}
-          viewport={{ once: true, amount: 0.5 }}
+          viewport={{ once: true, amount: 0.1 }}
         >
           <div ref={ref} className=" flex flex-wrap gap-8 justify-center">
             {DATA.projects.map((project, index) => (
