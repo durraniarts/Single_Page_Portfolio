@@ -3,6 +3,8 @@ import LinearGradient from "./LinearGradient";
 import { motion, useInView } from "framer-motion";
 import ImageCard from "./shared/ImageCard";
 import DATA from "../constants";
+import IconCloud from "./shared/magicui/icon_cloud";
+import { IconCloudDemo } from "./shared/Icon_cloud";
 
 const container = {
   hidden: {},
@@ -24,7 +26,7 @@ const Projects = ({ setSelectedPage }) => {
   }, [isInView]);
 
   return (
-    <section id="projects" className="py-48 flex  flex-col items-center">
+    <section id="projects" className="py-32 flex  flex-col items-center">
       {/* headings */}
       <motion.div
         className="md:w-2/5 mx-auto text-center"

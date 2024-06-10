@@ -3,6 +3,7 @@ import linkedin from "../assets/linkedin.png";
 import twitter from "../assets/twitter.png";
 import github from "../assets/github.svg";
 import instagram from "../assets/instagram.png";
+import { Github, Instagram, Linkedin, Twitter } from "lucide-react";
 const SocialMedia = ({ href, alt, src }) => {
   return (
     <a
@@ -19,26 +20,41 @@ const SocialMedia = ({ href, alt, src }) => {
 const SocialMediaIcons = () => {
   return (
     <div className=" flex justify-center md:justify-start my-6  gap-7">
-      <SocialMedia
+      <a
+        className="hover:opacity-50 transition duration-500"
         href={"https://www.linkedin.com/in/abdul-rehman-khan-555a50247"}
-        alt={"linkedin-link"}
-        src={linkedin}
-      />
-      <SocialMedia
+        target="_blank"
+        rel="noreferrer"
+      >
+        <Linkedin width={32} height={32} />
+      </a>
+
+      <a
+        className="hover:opacity-50 transition duration-500"
         href={"https://twitter.com/durrani1215"}
-        alt={"twitter -link"}
-        src={twitter}
-      />
-      <SocialMedia
+        target="_blank"
+        rel="noreferrer"
+      >
+        <Twitter width={32} height={32} />
+      </a>
+
+      <a
+        className="hover:opacity-50 transition duration-500"
         href={"https://github.com/durraniarts"}
-        alt={"facebook-link"}
-        src={github}
-      />
-      <SocialMedia
+        target="_blank"
+        rel="noreferrer"
+      >
+        <Github width={32} height={32} />
+      </a>
+
+      <a
+        className="hover:opacity-50 transition duration-500"
         href={"https://www.instagram.com/abdulrehman_khan_durrani/"}
-        alt={"instagram-link"}
-        src={instagram}
-      />
+        target="_blank"
+        rel="noreferrer"
+      >
+        <Instagram width={32} height={32} />
+      </a>
     </div>
   );
 };

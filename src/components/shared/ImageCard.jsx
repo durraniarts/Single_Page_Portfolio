@@ -1,9 +1,10 @@
+import { Globe } from "lucide-react";
 import React from "react";
 
 const ImageCard = ({ project }) => {
   const technologies = project.technologies.split(",");
   return (
-    <div className="border border-zinc-700 w-[350px] h-full  rounded-md bg-opaque-black  p-2 flex flex-col gap-4  ">
+    <div className="border border-zinc-700 w-full max-w-[350px] sm:w-[350px] h-full  rounded-md bg-opaque-black  p-2 flex flex-col gap-4  ">
       <img
         src={project.imglink}
         className="w-full h-[180px]  object-fit  "
@@ -30,9 +31,9 @@ const ImageCard = ({ project }) => {
         <a
           href={project.link}
           target="_blank"
-          className="  font-opensans text-sm text-white bg-zinc-500 w-fit py-2 px-3  rounded-md"
+          className="  font-opensans flex items-center gap-2 text-sm text-white bg-zinc-500 w-fit py-2 px-3  rounded-md"
         >
-          Github
+          Github <Globe width={14} height={14} />
         </a>
       </div>
     </div>
