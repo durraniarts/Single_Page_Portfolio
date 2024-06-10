@@ -21,7 +21,7 @@ const DATA = {
         "GSAP",
       ],
     },
-    { title: "backend", technologies: ["NodeJS", "ExpressJS"] },
+    { title: "backend", technologies: ["NodeJS", "ExpressJS","Flask","Django"] },
     { title: "databases", technologies: ["Mongodb", "MySql"] },
     {
       title: "Data Science",
@@ -30,7 +30,7 @@ const DATA = {
         "AI",
         "Data Preprocessing",
         "Pandas",
-        "Data Visualization",
+        "Data Visualization","Numpy"
       ],
     },
     { title: "mobile Development", technologies: ["React Native", "Expo"] },
