@@ -21,11 +21,16 @@ const DATA = {
         "GSAP",
       ],
     },
+<<<<<<< HEAD
     {
       title: "backend",
       technologies: ["NodeJS", "ExpressJS", "Flask", "Django"],
     },
     { title: "databases", technologies: ["Mongodb", "MySql", "PostgreSQL"] },
+=======
+    { title: "backend", technologies: ["NodeJS", "ExpressJS","Flask","Django"] },
+    { title: "databases", technologies: ["Mongodb", "MySql"] },
+>>>>>>> 739bbb3ae51aa314a096174c36f5fcd922032f54
     {
       title: "Data Science",
       technologies: [
@@ -33,8 +38,12 @@ const DATA = {
         "AI",
         "Data Preprocessing",
         "Pandas",
+<<<<<<< HEAD
         "Data Visualization",
         "Numpy",
+=======
+        "Data Visualization","Numpy"
+>>>>>>> 739bbb3ae51aa314a096174c36f5fcd922032f54
       ],
     },
     { title: "mobile Development", technologies: ["React Native", "Expo"] },
