@@ -21,20 +21,19 @@ const ImageCard = ({ project }) => {
         </div>
         <div className="flex flex-wrap gap-2">
           {technologies.map((d, index) => (
-            <div className="p-2 card_bg rounded-md">
+            <div className="py-2 px-3 card_bg rounded-md">
               <p className=" text-white font-opensans text-sm">{d}</p>
             </div>
           ))}
         </div>
-        <div className="bg-zinc-500 w-fit p-2  rounded-md">
-          <a
-            href={project.link}
-            target="_blank"
-            className="  font-opensans text-sm text-white"
-          >
-            Github
-          </a>
-        </div>
+
+        <a
+          href={project.link}
+          target="_blank"
+          className="  font-opensans text-sm text-white bg-zinc-500 w-fit py-2 px-3  rounded-md"
+        >
+          Github
+        </a>
       </div>
     </div>
   );

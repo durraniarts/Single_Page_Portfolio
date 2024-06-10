@@ -32,7 +32,7 @@ const Landing = ({ setSelectedPage }) => {
           before:w-full h-max  before:border-2 before:border-blue before:h-full before:z-[-1] "
           >
             <img
-              src="/assets/dp.png"
+              src="/assets/newdp.jpg"
               alt="profile"
               className=" rounded-t-full hover:filter hover:saturate-150 
               transition duration-500 z-10 w-[400px]"
@@ -40,7 +40,7 @@ const Landing = ({ setSelectedPage }) => {
           </div>
         ) : (
           <img
-            src="/assets/dp.png"
+            src="/assets/newdp.jpg"
             alt="profile"
             className=" rounded-t-full px-8 hover:filter hover:saturate-150
              transition duration-500 z-10 min-w-[300px] max-w-[400px]"
@@ -94,22 +94,22 @@ const Landing = ({ setSelectedPage }) => {
           }}
         >
           <AnchorLink
-            className=" bg-gradient-rainblue text-white rounded-sm p-3 text-center
-             font-semibold  transition duration-500 font-playfair md:w-1/2 w-1/4 min-w-fit "
+            className="   hover:bg-gradient-rainblue text-white rounded-md p-3 text-center font-bold
+             transition duration-500 border border-zinc-700  font-playfair md:w-1/2 w-1/4 min-w-fit "
             onClick={() => setSelectedPage("contact")}
             href="#contact"
           >
             Contact Me
           </AnchorLink>
           <AnchorLink
-            className=" rounded-sm bg-gradient-rainblue p-3 md:w-1/2 w-1/4 min-w-fit  text-center  "
+            className=" rounded-md  p-3 md:w-1/2 w-1/4 min-w-fit  text-center transition hover:bg-gradient-rainblue duration-500 border border-zinc-700 "
             onClick={() => setSelectedPage("contact")}
             href="#contact"
           >
             <div
-              className=" bg-transparent transition duration-500 w-full 
+              className="  w-full 
               h-full flex justify-center items-center
-             font-playfair   "
+             font-playfair   font-bold text-white"
             >
               Let's talk
             </div>

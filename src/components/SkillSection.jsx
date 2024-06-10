@@ -33,7 +33,7 @@ const SkillSection = ({ setSelectedPage }) => {
           }}
         >
           <p className=" font-playfair font-semibold text-3xl  xs:text-4xl mb-5 ">
-            What <span className="text-red">I KNOW</span>
+            My <span className="text-red">SKILLS</span>
           </p>
           <LinearGradient width={"w-1/3"} />
         </motion.div>
@@ -43,7 +43,7 @@ const SkillSection = ({ setSelectedPage }) => {
 
       <div
         ref={ref}
-        className="flex justify-center flex-col mt-16 gap-8 w-full "
+        className="flex justify-center flex-col mt-16 gap-8 w-full items-center "
       >
         <motion.div
           className="flex flex-row gap-4 flex-wrap  justify-start "
@@ -60,8 +60,9 @@ const SkillSection = ({ setSelectedPage }) => {
             <Card skills={data.technologies} key={index} title={data.title} />
           ))}
         </motion.div>
+        {/* <hr className="border border-zinc-500 border-b-0 w-[102%]" /> */}
         <motion.div
-          className=" "
+          className=" flex flex-grow w-full"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
@@ -71,16 +72,16 @@ const SkillSection = ({ setSelectedPage }) => {
             visible: { opacity: 1, y: 0 },
           }}
         >
-          <div className="border border-zinc-700  p-7 gap-7 flex flex-col flex-wrap rounded-md    min-w-[300px] bg-opaque-black">
-            <h4 className="font-opensans text-yellow font-black sm:text-lg text-md">
-              LANGUAGES
+          <div className="border border-zinc-700  p-4 gap-4 flex flex-col flex-wrap rounded-md    min-w-[300px] bg-opaque-black flex-grow">
+            <h4 className="font-opensans text-white font-black sm:text-lg text-md">
+              Languages
             </h4>
-            <div className="flex gap-4 flex-wrap">
+            <div className="flex gap-2 flex-wrap">
               {DATA.languages.map((language, index) => (
                 <div
                   key={index}
-                  className="p-4 
-                border  border-red  rounded-md"
+                  className="py-2  px-3
+                  border-none card_bg  rounded-md text-sm text-white"
                 >
                   {language}
                 </div>

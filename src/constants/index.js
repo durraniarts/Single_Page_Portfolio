@@ -21,8 +21,11 @@ const DATA = {
         "GSAP",
       ],
     },
-    { title: "backend", technologies: ["NodeJS", "ExpressJS"] },
-    { title: "databases", technologies: ["Mongodb", "MySql"] },
+    {
+      title: "backend",
+      technologies: ["NodeJS", "ExpressJS", "Flask", "Django"],
+    },
+    { title: "databases", technologies: ["Mongodb", "MySql", "PostgreSQL"] },
     {
       title: "Data Science",
       technologies: [
@@ -31,12 +34,13 @@ const DATA = {
         "Data Preprocessing",
         "Pandas",
         "Data Visualization",
+        "Numpy",
       ],
     },
     { title: "mobile Development", technologies: ["React Native", "Expo"] },
     { title: "Desktop App", technologies: ["Electron", "Tkinter"] },
   ],
-  languages: ["JavaScript", "TypeScript", "Python", "C", "SQL", "PostgreSQL"],
+  languages: ["JavaScript", "TypeScript", "Python", "C", "SQL"],
   projects: [
     {
       title: "DALLE Clone",

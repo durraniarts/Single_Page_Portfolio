@@ -84,9 +84,11 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
   }, [isAboveSmallScreens]);
 
   return (
-    <nav className={` ${""} z-40 w-full max-w-[1440px] fixed top-4 `}>
+    <nav
+      className={` ${""} z-40 w-full max-w-[1440px] fixed top-4  flex flex-col items-center justify-center`}
+    >
       <div
-        className={`${navbarBackground} w-full h-full absolute -z-10 backdrop-blur-md transition-all duration-200 border border-zinc-700  rounded-full `}
+        className={`${navbarBackground} w-[95%] h-full absolute -z-10 backdrop-blur-md transition-all duration-200 border border-zinc-700  rounded-full `}
       />
       <div className="flex items-center justify-between mx-auto w-5/6 py-4 z-50 ">
         <h4 className=" font-playfair text-3xl font-bold ">DA</h4>

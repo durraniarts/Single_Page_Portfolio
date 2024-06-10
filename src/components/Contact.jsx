@@ -84,7 +84,7 @@ const Contact = ({ setSelectedPage }) => {
             method="POST"
           >
             <input
-              className="w-full border  bg-transparent placeholder-[#fefae0] font-semibold p-3 text-white rounded-md "
+              className="w-full border border-zinc-700  bg-transparent placeholder-[#fefae0] font-semibold p-3 text-white rounded-md "
               placeholder="NAME"
               type="text"
               {...register("name", { required: true, maxLength: 100 })}
@@ -99,7 +99,7 @@ const Contact = ({ setSelectedPage }) => {
               </p>
             )}
             <input
-              className="w-full border bg-transparent placeholder-[#fefae0] font-semibold p-3 text-white rounded-md "
+              className="w-full border border-zinc-700 bg-transparent placeholder-[#fefae0] font-semibold p-3 text-white rounded-md "
               placeholder="EMAIL"
               type="email"
               {...register("email", {
@@ -114,7 +114,7 @@ const Contact = ({ setSelectedPage }) => {
               </p>
             )}
             <textarea
-              className="w-full   border-white border bg-transparent placeholder-[#fefae0] font-semibold p-3 text-white rounded-md "
+              className="w-full    border border-zinc-700 bg-transparent placeholder-[#fefae0] font-semibold p-3 text-white rounded-md "
               placeholder="MESSAGE"
               type="text"
               rows="4"
@@ -135,7 +135,7 @@ const Contact = ({ setSelectedPage }) => {
             <button
               type="submit
             "
-              className=" p-5 bg-yellow font-semibold mt-5 text-deep-blue rounded-md hover:bg-red hover:text-white transition duration-500 "
+              className=" p-5 bg-yellow font-semibold mt-5 text-deep-blue rounded-md  transition duration-500 "
             >
               SEND ME A MESSAGE
             </button>

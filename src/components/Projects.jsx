@@ -45,8 +45,8 @@ const Projects = ({ setSelectedPage }) => {
         </div>
 
         <p className=" mt-10 mb-10">
-          Some of my personal projects i have been working since I started my
-          journey with software development.
+          Here are some of the personal projects I have been working on since I
+          started my journey in software development.
         </p>
       </motion.div>
 
@@ -70,9 +70,9 @@ const Projects = ({ setSelectedPage }) => {
       </div>
       <a
         href="https://github.com/durraniarts/"
-        className="mt-10 font-opensans font-black underline underline-offset-4 text-yellow  border border-gray-700 p-2 rounded-md text-sm"
+        className="mt-10 font-opensans font-black  text-yellow  border border-gray-700 px-3 py-2 rounded-md text-sm"
       >
-        FOR MORE PROJECTS VISIT MY GITHUB ACCOUNT
+        For more projects visit my github
       </a>
     </section>
   );
