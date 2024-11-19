@@ -8,8 +8,6 @@ const DATA = {
     {
       title: "frontend",
       technologies: [
-        // ["Html", "gray-500"],
-        // ["CSS", "gray-500"],
         "Html",
         "CSS",
         "Tailwind",
@@ -24,9 +22,9 @@ const DATA = {
 
     {
       title: "backend",
-      technologies: ["NodeJS", "ExpressJS", "Flask", "Django"],
+      technologies: ["NodeJS", "ExpressJS", "Flask", "Bunjs"],
     },
-    { title: "databases", technologies: ["Mongodb", "MySql", "PostgreSQL"] },
+    { title: "databases", technologies: ["Mongodb", "MySql"] },
 
     {
       title: "Data Science",
@@ -46,22 +44,44 @@ const DATA = {
   languages: ["JavaScript", "TypeScript", "Python", "C", "SQL"],
   projects: [
     {
+      title: "Dealguru.se",
+      technologies:
+        " Nextjs, Bunjs, MySQL, Typescript, Tailwind CSS, Google Cloud Services, Docker, Drizzle ORM",
+      imglink: "/assets/dealguru.png",
+      // github_link: "https://github.com/durraniarts/dall_e_clone",
+      link: "https://dealguru.se",
+      year: 2024,
+    },
+    {
+      title: "Traffic sign analyzer",
+      technologies:
+        " React, Typescript, Tailwind CSS, scikit learn, numpy, joblib, cv2, Drizzle ORM",
+      imglink: "/assets/sign_analyzer.png",
+      github_link:
+        "https://github.com/durraniarts/Traffic_sign_classifier_flask",
+      // link: "https://dealguru.se",
+      year: 2024,
+    },
+    {
       title: "DALLE Clone",
       technologies: " React, Node, Express, MongoDB, Tailwind CSS, OPEN-AI API",
       imglink: "/assets/project-4.png",
-      link: "https://github.com/durraniarts/dall_e_clone",
+      github_link: "https://github.com/durraniarts/dall_e_clone",
+      year: 2023,
     },
     {
       title: "YouTube Clone",
       technologies: " React, Tailwind CSS, RAPID API, MUI",
       imglink: "/assets/project-6.png",
-      link: "https://github.com/durraniarts/youtube_clone",
+      github_link: "https://github.com/durraniarts/youtube_clone",
+      year: 2023,
     },
     {
       title: "CHAT GPT Clone",
       technologies: " Next, Node, Express, MongoDB, Tailwind CSS, OPEN-AI API",
       imglink: "/assets/project-9.png",
-      link: "https://github.com/durraniarts/promptopia_Next_app",
+      github_link: "https://github.com/durraniarts/promptopia_Next_app",
+      year: 2023,
     },
   ],
 };

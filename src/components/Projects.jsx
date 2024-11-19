@@ -1,10 +1,8 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import LinearGradient from "./LinearGradient";
 import { motion, useInView } from "framer-motion";
 import ImageCard from "./shared/ImageCard";
 import DATA from "../constants";
-import IconCloud from "./shared/magicui/icon_cloud";
-import { IconCloudDemo } from "./shared/Icon_cloud";
 
 const container = {
   hidden: {},
